@@ -1,0 +1,36 @@
+---
+- name: Configure OpenVPN
+  hosts: openvpn
+  gather_facts: false
+  roles:
+    - openvpn
+
+- name: Configure IPAServer
+  hosts: ipaserver
+  gather_facts: false
+  roles:
+    - ipaserver
+
+- name: Configure Aptly Repository Server
+  hosts: aptlyserver
+  gather_facts: false
+  roles:
+    - aptlyserver
+
+- name: Configure Vault Server
+  hosts: vaultserver
+  gather_facts: false
+  roles:
+    - vaultserver
+
+- name: Configure Gitlab Server
+  hosts: gitlabserver
+  gather_facts: false
+  roles:
+    - gitlab
+
+- name: Configure Jenkins Server
+  hosts: cicdmasterserver
+  gather_facts: false
+  roles:
+    - jenkinsmaster
