@@ -1,36 +1,138 @@
 ---
-- name: Configure OpenVPN
+- name: Configure Aptly Repository Server
+  hosts: aptly
+  gather_facts: false
+  roles:
+    - aptly
+
+- name: Configure Arangodb Master Server
+  hosts: arangodbmaster
+  gather_facts: false
+  roles:
+    - arangodbmaster
+
+- name: Configure Arangodb Node
+  hosts: arangodbnode
+  gather_facts: false
+  roles:
+    - arangodbnode
+
+- name: Configure Common Configuration Settings
+  hosts: all
+  gather_facts: false
+  roles:
+    - common
+
+- name: Configure Hashicorp Consul Server
+  hosts: consul
+  gather_facts: false
+  roles:
+    - consul
+
+- name: Configure Elastic Search Master
+  hosts: elasticsearchmaster
+  gather_facts: false
+  roles:
+    - elasticsearchmaster
+
+- name: Configure Elastic Search Node
+  hosts: elasticsearchnode
+  gather_facts: false
+  roles:
+    - elasticsearchnode
+
+- name: Configure Apache Flink Server
+  hosts: flink
+  gather_facts: false
+  roles:
+    - flink
+
+- name: Configure Gitlab Repository Server
+  hosts: gitlab
+  gather_facts: false
+  roles:
+    - gitlab
+
+- name: Configure Apache Hadoop
+  hosts: hadoop
+  gather_facts: false
+  roles:
+    - hadoop
+
+- name: Configure InfluxDB
+  hosts: influxdb
+  gather_facts: false
+  roles:
+    - influxdb
+
+- name: Configure Jenkins Master
+  hosts: jenkinsmaster
+  gather_facts: false
+  roles:
+    - jenkinsmaster
+
+- name: Configure Jenkins Node
+  hosts: jenkinsnode
+  gather_facts: false
+  roles:
+    - jenkinsnode
+
+- name: Configure Apache Kafka
+  hosts: kafka
+  gather_facts: false
+  roles:
+    - kafka
+
+- name: Configure Nginx
+  hosts: nginx
+  gather_facts: false
+  roles:
+    - nginx
+
+- name: Configure Apache NiFi
+  hosts: nifi
+  gather_facts: false
+  roles:
+    - nifi
+
+- name: Configure OpenVPN Server
   hosts: openvpn
   gather_facts: false
   roles:
     - openvpn
 
-- name: Configure IPAServer
-  hosts: ipaserver
+- name: Configure OpenSSL PKI Ca
+  hosts: pki
   gather_facts: false
   roles:
-    - ipaserver
+    - pki
 
-- name: Configure Aptly Repository Server
-  hosts: aptlyserver
+- name: Configure Rundeck Server
+  hosts: rundeck
   gather_facts: false
   roles:
-    - aptlyserver
+    - rundeck
 
-- name: Configure Vault Server
-  hosts: vaultserver
+- name: Configure SonarQube
+  hosts: sonarqube
   gather_facts: false
   roles:
-    - vaultserver
+    - sonarqube
 
-- name: Configure Gitlab Server
-  hosts: gitlabserver
+- name: Configure Apache Spark
+  hosts: spark
   gather_facts: false
   roles:
-    - gitlab
+    - spark
 
-- name: Configure Jenkins Server
-  hosts: cicdmasterserver
+- name: Configure Hashicorp Vault
+  hosts: vault
   gather_facts: false
   roles:
-    - jenkinsmaster
+    - vault
+
+- name: Configure Apache Zookeeper
+  hosts: zookeeper
+  gather_facts: false
+  roles:
+    - zookeeper
