@@ -28,7 +28,7 @@ zookeeper_group=[]
 
 # Retrieve Hosts Based on AnsibleRole tag, Environment (management,development,staging,prod)
 def get_hosts(ec2,fv):
-    f = {'Name':'tag:AnsibleRole', 'Values':[fv]}
+    f = [{'Name':'tag:AnsibleRole', 'Values':[fv]},{'Name':'tag:env', 'Values':['staging']}]
     hosts = []
     for each_in in ec2.instances.filter(Filters=[f]):
         if each_in.private_ip_address is not None:
