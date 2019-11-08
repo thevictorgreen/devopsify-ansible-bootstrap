@@ -29,6 +29,12 @@
   roles:
     - consul
 
+- name: Configure Bind9 Dns Forwarder
+  hosts: dnsforwarder
+  gather_facts: false
+  roles:
+    - dnsforwarder
+
 - name: Configure Elastic Search Master
   hosts: elasticsearchmaster
   gather_facts: false
