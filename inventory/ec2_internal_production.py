@@ -7,6 +7,7 @@ aptly_group=[]
 arangodbmaster_group=[]
 arangodbnode_group=[]
 consul_group=[]
+dnsforwarder_group=[]
 elasticsearchmaster_group=[]
 elasticsearchnode_group=[]
 flink_group=[]
@@ -41,6 +42,7 @@ def  main():
     arangodbmaster_group = get_hosts(ec2,"arangodbmaster")
     arangodbnode_group = get_hosts(ec2,"arangodbnode")
     consul_group = get_hosts(ec2,"consul")
+    dnsforwarder_group = get_hosts(ec2,"dnsforwarder")
     elasticsearchmaster_group = get_hosts(ec2,"elasticsearchmaster")
     elasticsearchnode_group = get_hosts(ec2,"elasticsearchnode")
     flink_group = get_hosts(ec2,"flink")
@@ -64,6 +66,7 @@ def  main():
     'arangodbmaster': {'hosts': arangodbmaster_group, 'vars': {'group_name': 'Arangodb Master Group'}},
     'arangodbnode': {'hosts': arangodbnode_group, 'vars': {'group_name': 'Arangodb Node Group'}},
     'consul': {'hosts': consul_group, 'vars': {'group_name': 'Consul Group'}},
+    'dnsforwarder': {'hosts': dnsforwarder_group, 'vars': {'group_name': 'Dns Forwarder Group'}},
     'elasticsearchmaster': {'hosts': elasticsearchmaster_group, 'vars': {'group_name': 'Elastic Search Master Group'}},
     'elasticsearchnode': {'hosts': elasticsearchnode_group, 'vars': {'group_name': 'Elastic Search Node Group'}},
     'flink': {'hosts': flink_group, 'vars': {'group_name': 'Flink Group'}},
