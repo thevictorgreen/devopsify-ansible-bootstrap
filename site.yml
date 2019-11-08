@@ -1,4 +1,10 @@
 ---
+- name: Configure Common Configuration Settings
+  hosts: all
+  gather_facts: false
+  roles:
+    - common
+
 - name: Configure Aptly Repository Server
   hosts: aptly
   gather_facts: false
@@ -16,12 +22,6 @@
   gather_facts: false
   roles:
     - arangodbnode
-
-- name: Configure Common Configuration Settings
-  hosts: all
-  gather_facts: false
-  roles:
-    - common
 
 - name: Configure Hashicorp Consul Server
   hosts: consul
