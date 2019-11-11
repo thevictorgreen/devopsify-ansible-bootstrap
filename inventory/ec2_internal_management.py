@@ -31,9 +31,9 @@ zookeeper_group=[]
 def get_hosts(ec2,fv):
     f = [{'Name':'tag:AnsibleRole', 'Values':[fv]},{'Name':'tag:env', 'Values':['management']}]
     hosts = []
-    for each_in in ec2.instances.filter(Filters=[f]):
+    for each_in in ec2.instances.filter(Filters=f):
         if each_in.private_ip_address is not None:
-            hosts.append(each_in.public_ip_address)
+            hosts.append(each_in.private_ip_address)
     return hosts
 
 def  main():
