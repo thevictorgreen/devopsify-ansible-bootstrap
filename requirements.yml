@@ -14,7 +14,7 @@
   version: v0.1.0
   name: consul
 - src: https://github.com/thevictorgreen/devopsify-ansible-role-dnsforwarder
-  version: v0.1.1
+  version: v0.1.2
   name: dnsforwarder
 - src: https://github.com/thevictorgreen/devopsify-ansible-role-elasticsearchmaster
   version: v0.1.1
@@ -59,7 +59,7 @@
   version: v0.1.0
   name: pki
 - src: https://github.com/thevictorgreen/devopsify-ansible-role-rundeck
-  version: v0.1.1
+  version: v0.1.2
   name: rundeck
 - src: https://github.com/thevictorgreen/devopsify-ansible-role-sonarqube
   version: v0.1.0
