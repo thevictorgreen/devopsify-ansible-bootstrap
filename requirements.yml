@@ -59,7 +59,7 @@
   version: v0.1.0
   name: pki
 - src: https://github.com/thevictorgreen/devopsify-ansible-role-rundeck
-  version: v0.1.2
+  version: v0.1.3
   name: rundeck
 - src: https://github.com/thevictorgreen/devopsify-ansible-role-sonarqube
   version: v0.1.0
