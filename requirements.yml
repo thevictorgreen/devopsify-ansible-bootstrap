@@ -8,13 +8,13 @@
   version: v0.1.0
   name: arangodbnode
 - src: https://github.com/thevictorgreen/devopsify-ansible-role-common
-  version: v0.1.1
+  version: v0.1.2
   name: common
 - src: https://github.com/thevictorgreen/devopsify-ansible-role-consul
   version: v0.1.0
   name: consul
 - src: https://github.com/thevictorgreen/devopsify-ansible-role-dnsforwarder
-  version: v0.1.3
+  version: v0.1.4
   name: dnsforwarder
 - src: https://github.com/thevictorgreen/devopsify-ansible-role-elasticsearchmaster
   version: v0.1.1
@@ -53,7 +53,7 @@
   version: v0.1.0
   name: nifi
 - src: https://github.com/thevictorgreen/devopsify-ansible-role-openvpn
-  version: v0.1.1
+  version: v0.1.2
   name: openvpn
 - src: https://github.com/thevictorgreen/devopsify-ansible-role-pki
   version: v0.1.0
