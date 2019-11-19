@@ -32,7 +32,7 @@
   version: v0.1.0
   name: hadoop
 - src: https://github.com/thevictorgreen/devopsify-ansible-role-influxdb
-  version: v0.1.0
+  version: v0.1.1
   name: influxdb
 - src: https://github.com/thevictorgreen/devopsify-ansible-role-ipa
   version: v0.1.0
