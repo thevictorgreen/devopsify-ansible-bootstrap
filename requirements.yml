@@ -26,7 +26,7 @@
   version: v0.1.0
   name: flink
 - src: https://github.com/thevictorgreen/devopsify-ansible-role-gitlab
-  version: v0.1.0
+  version: v0.1.1
   name: gitlab
 - src: https://github.com/thevictorgreen/devopsify-ansible-role-hadoop
   version: v0.1.0
