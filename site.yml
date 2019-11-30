@@ -23,6 +23,18 @@
   roles:
     - arangodbnode
 
+- name: Configure Chef Server
+  hosts: chefserver
+  gather_facts: false
+  roles:
+    - chefserver
+
+- name: Configure Chef Workstation
+  hosts: chefworkstation
+  gather_facts: false
+  roles:
+    - chefworkstation
+
 - name: Configure Hashicorp Consul Server
   hosts: consul
   gather_facts: false
