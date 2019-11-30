@@ -6,6 +6,8 @@ import json
 aptly_group=[]
 arangodbmaster_group=[]
 arangodbnode_group=[]
+chefserver_group=[]
+chefworkstation_group=[]
 consul_group=[]
 dnsforwarder_group=[]
 elasticsearchmaster_group=[]
@@ -41,6 +43,8 @@ def  main():
     aptly_group = get_hosts(ec2,"aptly")
     arangodbmaster_group = get_hosts(ec2,"arangodbmaster")
     arangodbnode_group = get_hosts(ec2,"arangodbnode")
+    chefserver_group= get_hosts(ec2,"chefserver")
+    chefworkstation_group= get_hosts(ec2,"chefworkstation")
     consul_group = get_hosts(ec2,"consul")
     dnsforwarder_group = get_hosts(ec2,"dnsforwarder")
     elasticsearchmaster_group = get_hosts(ec2,"elasticsearchmaster")
@@ -65,6 +69,8 @@ def  main():
     'aptly': {'hosts': aptly_group, 'vars': {'group_name': 'Aptly Group'}},
     'arangodbmaster': {'hosts': arangodbmaster_group, 'vars': {'group_name': 'Arangodb Master Group'}},
     'arangodbnode': {'hosts': arangodbnode_group, 'vars': {'group_name': 'Arangodb Node Group'}},
+    'chefserver': {'hosts': chefserver_group, 'vars': {'group_name': 'Chef Server Group'}},
+    'chefworkstation': {'hosts': chefworkstation_group, 'vars': {'group_name': 'Chef Workstation Group'}},
     'consul': {'hosts': consul_group, 'vars': {'group_name': 'Consul Group'}},
     'dnsforwarder': {'hosts': dnsforwarder_group, 'vars': {'group_name': 'Dns Forwarder Group'}},
     'elasticsearchmaster': {'hosts': elasticsearchmaster_group, 'vars': {'group_name': 'Elastic Search Master Group'}},

@@ -7,6 +7,12 @@
 - src: https://github.com/thevictorgreen/devopsify-ansible-role-arangodbnode
   version: v0.1.0
   name: arangodbnode
+- src: https://github.com/thevictorgreen/devopsify-ansible-role-chefserver
+  version: v0.1.0
+  name: chefserver
+- src: https://github.com/thevictorgreen/devopsify-ansible-role-chefworkstation
+  version: v0.1.0
+  name: chefworkstation
 - src: https://github.com/thevictorgreen/devopsify-ansible-role-common
   version: v0.1.2
   name: common
@@ -71,5 +77,5 @@
   version: v0.1.0
   name: vault
 - src: https://github.com/thevictorgreen/devopsify-ansible-role-zookeeper
-  version: v0.1.0
+  version: v0.1.1
   name: zookeeper
