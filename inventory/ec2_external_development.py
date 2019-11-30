@@ -24,6 +24,7 @@ nifi_group=[]
 openvpn_group=[]
 pki_group=[]
 rundeck_group=[]
+sample_group=[]
 sonarqube_group=[]
 spark_group=[]
 vault_group=[]
@@ -61,6 +62,7 @@ def  main():
     openvpn_group = get_hosts(ec2,"openvpn")
     pki_group = get_hosts(ec2,"pki")
     rundeck_group = get_hosts(ec2,"rundeck")
+    sample_group = get_hosts(ec2,"sample")
     sonarqube_group = get_hosts(ec2,"sonarqube")
     spark_group = get_hosts(ec2,"spark")
     vault_group = get_hosts(ec2,"vault")
@@ -87,6 +89,7 @@ def  main():
     'openvpn': {'hosts': openvpn_group, 'vars': {'group_name': 'OpenVPN Group'}},
     'pki': {'hosts': pki_group, 'vars': {'group_name': 'PKI Group'}},
     'rundeck': {'hosts': rundeck_group, 'vars': {'group_name': 'Rundeck Group'}},
+    'sample': {'hosts': sample_group, 'vars': {'group_name': 'Sample Group'}},
     'sonarqube': {'hosts': sonarqube_group, 'vars': {'group_name': 'SonarQube Group'}},
     'spark': {'hosts': spark_group, 'vars': {'group_name': 'Spark Group'}},
     'vault': {'hosts': vault_group, 'vars': {'group_name': 'Vault Group'}},
