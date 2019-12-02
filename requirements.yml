@@ -7,6 +7,9 @@
 - src: https://github.com/thevictorgreen/devopsify-ansible-role-arangodbnode
   version: v0.1.0
   name: arangodbnode
+- src: https://github.com/thevictorgreen/devopsify-ansible-role-chefclient
+  version: v0.1.2
+  name: chefclient
 - src: https://github.com/thevictorgreen/devopsify-ansible-role-chefserver
   version: v0.1.1
   name: chefserver
@@ -59,7 +62,7 @@
   version: v0.1.0
   name: nifi
 - src: https://github.com/thevictorgreen/devopsify-ansible-role-openvpn
-  version: v0.1.2
+  version: v0.1.3
   name: openvpn
 - src: https://github.com/thevictorgreen/devopsify-ansible-role-pki
   version: v0.1.0
