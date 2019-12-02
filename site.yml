@@ -154,3 +154,10 @@
   gather_facts: false
   roles:
     - zookeeper
+
+#- name: Add Chef Client
+#  hosts:
+#    - sample
+#  gather_facts: false
+#  roles:
+#    - chefclient
