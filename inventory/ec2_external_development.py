@@ -6,6 +6,7 @@ import json
 aptly_group=[]
 arangodbmaster_group=[]
 arangodbnode_group=[]
+centos_group=[]
 chefserver_group=[]
 chefworkstation_group=[]
 consul_group=[]
@@ -27,6 +28,7 @@ rundeck_group=[]
 sample_group=[]
 sonarqube_group=[]
 spark_group=[]
+ubuntu_group=[]
 vault_group=[]
 zookeeper_group=[]
 
@@ -44,6 +46,7 @@ def  main():
     aptly_group = get_hosts(ec2,"aptly")
     arangodbmaster_group = get_hosts(ec2,"arangodbmaster")
     arangodbnode_group = get_hosts(ec2,"arangodbnode")
+    centos_group = get_hosts(ec2,"centos")
     chefserver_group= get_hosts(ec2,"chefserver")
     chefworkstation_group= get_hosts(ec2,"chefworkstation")
     consul_group = get_hosts(ec2,"consul")
@@ -66,11 +69,13 @@ def  main():
     sonarqube_group = get_hosts(ec2,"sonarqube")
     spark_group = get_hosts(ec2,"spark")
     vault_group = get_hosts(ec2,"vault")
+    ubuntu_group = get_hosts(ec2,"ubuntu")
     zookeeper_group = get_hosts(ec2,"zookeeper")
     all_groups = {
     'aptly': {'hosts': aptly_group, 'vars': {'group_name': 'Aptly Group'}},
     'arangodbmaster': {'hosts': arangodbmaster_group, 'vars': {'group_name': 'Arangodb Master Group'}},
     'arangodbnode': {'hosts': arangodbnode_group, 'vars': {'group_name': 'Arangodb Node Group'}},
+    'centos': {'hosts': centos_group, 'vars': {'group_name': 'Centos Group'}},
     'chefserver': {'hosts': chefserver_group, 'vars': {'group_name': 'Chef Server Group'}},
     'chefworkstation': {'hosts': chefworkstation_group, 'vars': {'group_name': 'Chef Workstation Group'}},
     'consul': {'hosts': consul_group, 'vars': {'group_name': 'Consul Group'}},
@@ -92,6 +97,7 @@ def  main():
     'sample': {'hosts': sample_group, 'vars': {'group_name': 'Sample Group'}},
     'sonarqube': {'hosts': sonarqube_group, 'vars': {'group_name': 'SonarQube Group'}},
     'spark': {'hosts': spark_group, 'vars': {'group_name': 'Spark Group'}},
+    'ubuntu': {'hosts': ubuntu_group, 'vars': {'group_name': 'Ubuntu Group'}},
     'vault': {'hosts': vault_group, 'vars': {'group_name': 'Vault Group'}},
     'zookeeper': {'hosts': zookeeper_group, 'vars': {'group_name': 'Zookeeper Group'}}
     }
