@@ -19,6 +19,12 @@
 - src: https://github.com/thevictorgreen/devopsify-ansible-role-common
   version: v0.1.2
   name: common
+- src: https://github.com/thevictorgreen/devopsify-ansible-role-common-centos
+  version: v0.1.0
+  name: commoncentos
+- src: https://github.com/thevictorgreen/devopsify-ansible-role-common-ubuntu
+  version: v0.1.0
+  name: commonubuntu
 - src: https://github.com/thevictorgreen/devopsify-ansible-role-consul
   version: v0.1.0
   name: consul
