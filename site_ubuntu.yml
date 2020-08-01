@@ -1,9 +1,9 @@
 ---
 - name: Configure Common Configuration Settings
-  hosts: all
+  hosts: ubuntu
   gather_facts: false
   roles:
-    - common
+    - commonubuntu
 
 - name: Configure Aptly Repository Server
   hosts: aptly

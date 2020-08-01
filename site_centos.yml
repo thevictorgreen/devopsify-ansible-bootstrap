@@ -1,9 +1,9 @@
 ---
 - name: Configure Common Configuration Settings
-  hosts: all
+  hosts: centos
   gather_facts: false
   roles:
-    - common
+    - commoncentos
 
 #- name: Add Chef Client
 #  hosts:
