@@ -20,6 +20,7 @@ influxdb_group=[]
 jenkinsmaster_group=[]
 jenkinsnode_group=[]
 kafka_group=[]
+kubernetes_group=[]
 nginx_group=[]
 nifi_group=[]
 openvpn_group=[]
@@ -60,6 +61,7 @@ def  main():
     jenkinsmaster_group = get_hosts(ec2,"jenkinsmaster")
     jenkinsnode_group = get_hosts(ec2,"jenkinsnode")
     kafka_group = get_hosts(ec2,"kafka")
+    kubernetes_group = get_hosts(ec2,"kubernetes")
     nginx_group = get_hosts(ec2,"nginx")
     nifi_group = get_hosts(ec2,"nifi")
     openvpn_group = get_hosts(ec2,"openvpn")
@@ -89,6 +91,7 @@ def  main():
     'jenkinsmaster': {'hosts': jenkinsmaster_group, 'vars': {'group_name': 'Jenkins Master Group'}},
     'jenkinsnode': {'hosts': jenkinsnode_group, 'vars': {'group_name': 'Jenkins Node Group'}},
     'kafka': {'hosts': kafka_group, 'vars': {'group_name': 'Kafka Group'}},
+    'kubernetes': {'hosts': kubernetes_group, 'vars': {'group_name': 'Kubernetes Group'}},
     'nginx': {'hosts': nginx_group, 'vars': {'group_name': 'Nginx Group'}},
     'nifi': {'hosts': nifi_group, 'vars': {'group_name': 'NiFi Group'}},
     'openvpn': {'hosts': openvpn_group, 'vars': {'group_name': 'OpenVPN Group'}},

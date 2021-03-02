@@ -5,9 +5,8 @@
   roles:
     - commoncentos
 
-#- name: Add Chef Client
-#  hosts:
-#    - sample
-#  gather_facts: false
-#  roles:
-#    - chefclient
+- name: Add Chef Client
+  hosts: kubernetes
+  gather_facts: false
+  roles:
+    - kubernetes
