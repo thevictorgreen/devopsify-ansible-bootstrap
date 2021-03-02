@@ -61,6 +61,9 @@
 - src: https://github.com/thevictorgreen/devopsify-ansible-role-kafka
   version: v0.1.0
   name: kafka
+- src: https://github.com/thevictorgreen/devopsify-ansible-role-kubernetes
+  version: v0.1.0
+  name: kubernetes
 - src: https://github.com/thevictorgreen/devopsify-ansible-role-nginx
   version: v0.1.1
   name: nginx
