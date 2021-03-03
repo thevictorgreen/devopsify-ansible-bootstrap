@@ -1,0 +1,12 @@
+---
+- name: Configure Common Configuration Settings
+  hosts: all
+  gather_facts: false
+  roles:
+    - common
+
+- name: Configure Kubernetes
+  hosts: all
+  gather_facts: false
+  roles:
+    - kubernetes
