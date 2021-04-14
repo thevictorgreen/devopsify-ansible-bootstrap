@@ -1,6 +1,32 @@
 ---
 - name: Configure Common Configuration Settings
-  hosts: ubuntu
+  hosts:
+    - ubuntu
+    - aptly
+    - arangodbmaster
+    - arangodbnode
+    - chefserver
+    - chefworkstation
+    - consul
+    - dnsforwarder
+    - elasticsearchmaster
+    - elasticsearchnode
+    - flink
+    - gitlab
+    - hadoop
+    - influxdb
+    - jenkinsmaster
+    - jenkinsnode
+    - kafka
+    - nginx
+    - nifi
+    - openvpn
+    - pki
+    - rundeck
+    - sonarqube
+    - spark
+    - vault
+    - zookeeper
   gather_facts: false
   roles:
     - commonubuntu
