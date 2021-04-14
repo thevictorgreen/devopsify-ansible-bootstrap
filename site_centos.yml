@@ -1,12 +1,17 @@
 ---
 - name: Configure Common Configuration Settings
-  hosts: centos
+  hosts:
+    - centos
+    - etcd
+    - k8smaster
+    - k8sworker
+    - k8smgr
   gather_facts: false
   roles:
     - commoncentos
 
-- name: Add Chef Client
-  hosts: kubernetes
-  gather_facts: false
-  roles:
-    - kubernetes
+#- name: Add Chef Client
+#  hosts: kubernetes
+#  gather_facts: false
+#  roles:
+#    - kubernetes
