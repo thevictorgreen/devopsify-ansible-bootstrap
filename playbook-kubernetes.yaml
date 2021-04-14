@@ -3,7 +3,7 @@
   hosts: all
   gather_facts: false
   roles:
-    - common
+    - commoncentos
 
 - name: Configure Kubernetes
   hosts: all
